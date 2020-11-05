@@ -24,29 +24,30 @@ function buildTable(data) {
 }
 
 // 1. Create a variable to keep track of all the filters as an object.
-var filters = {} 
+var filters ={}
 
 // 3. Use this function to update the filters. 
 function updateFilters() {
+
     // 4a. Save the element that was changed as a variable.
-      var changedElement = d3.select(this).select("input");
+
     // 4b. Save the value that was changed as a variable.
-      var changedValue = changedElement.property("value");
-      console.log(elementValue);
+
+console.log (changedvariable)
     // 4c. Save the id of the filter that was changed as a variable.
-      let filterId = changedElement.attr("id");
-      console.log(filterId)
-  
+  var changedinput=d3.select(this).select("input")
+  var changedvariable=changedinput.property("value")
+changedId=changedinput.attr("id")
+  console.log(changedvariable)
     // 5. If a filter value was entered then add that filterId and value
     // to the filters list. Otherwise, clear that filter from the filters object.
-    if (changedValue) {
-      filters[filterId] = change;
-    }
-    else {
-      delete filters[filterId];
-    }
-    console.log(filters)
-  
+ if (changedvariable){
+filters[changedId]=changedvariable
+ }
+ else{
+delete filters[changedId]
+ }
+  console.log(filters)
     // 6. Call function to apply all filters and rebuild the table
     filterTable();
   
@@ -56,24 +57,22 @@ function updateFilters() {
   function filterTable() {
   
     // 8. Set the filtered data to the tableData.
-    var filteredData= tableData 
+    var filterdata=tableData
   
     // 9. Loop through all of the filters and keep any data that
     // matches the filter values
-    Object.entries(filters).forEach(([key, value]) => {
+    Object.entries(filters).forEach(([key,value])=>{
       console.log(value)
       console.log(key)
-      filteredData = filteredData.filter(obj => obj [key] === value);
-      });
-
-
+      filterdata=filterdata.filter(obj=>obj [key]==value)
+    })
   
     // 10. Finally, rebuild the table using the filtered data
-    buildTable(filteredData)
+    buildTable(filterdata)
   }
   
   // 2. Attach an event to listen for changes to each filter
-  d3.selectAll(".filter").on("change", updateFilters);
+  d3.selectAll(".filter").on("change",updateFilters)
   
   // Build the table when the page loads
   buildTable(tableData);
