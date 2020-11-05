@@ -30,15 +30,14 @@ var filters ={}
 function updateFilters() {
 
     // 4a. Save the element that was changed as a variable.
+    var changedinput=d3.select(this).select("input")
 
     // 4b. Save the value that was changed as a variable.
-
-console.log (changedvariable)
+    var changedvariable=changedinput.property("value")
+    console.log (changedvariable)
     // 4c. Save the id of the filter that was changed as a variable.
-  var changedinput=d3.select(this).select("input")
-  var changedvariable=changedinput.property("value")
-changedId=changedinput.attr("id")
-  console.log(changedvariable)
+    changedId=changedinput.attr("id")
+    console.log(changedvariable)
     // 5. If a filter value was entered then add that filterId and value
     // to the filters list. Otherwise, clear that filter from the filters object.
  if (changedvariable){
