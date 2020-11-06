@@ -1,6 +1,5 @@
 body {
-
-    color: #f7f7f7;
+  color: #f7f7f7;
   }
 
 .jumbotron {
@@ -10,4 +9,4 @@ body {
 }
 /* the input box a little wider */
 input{
-    padding:7px
+    padding:7px; }
