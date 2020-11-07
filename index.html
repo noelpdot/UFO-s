@@ -29,7 +29,8 @@ crossorigin="anonymous"
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-4">
-                <h2>UFO Sightings: Fact or Fancy? <small>Ufologists Weigh In</small></h2>
+                <h2>UFO Sightings: Fact or Fancy?<br>
+                   <small style="color: yellow;">Ufologists Weigh In</small></h2>
              
             </div>
             <div class="col-md-8">
@@ -46,33 +47,33 @@ crossorigin="anonymous"
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-3">
-                <form >
+                <form>
                     <p style="font-size:large">Filter Search</p>
                     
                     <ul class="list-group" id="filters">
                       
                       <li class="filter list-group-item bg-dark">
-                        <label style="color:white" for="date">Enter Date</label>
+                        <label style="color:yellow" for="date">Enter Date</label>
                         <input class="form-control" id="datetime" type="text" placeholder="eg. 1/10/2010">
                       </li>
 
                       <li class="filter list-group-item bg-dark">
-                        <label for="city" style="color: white">Enter a City</label>
+                        <label for="city" style="color: yellow">Enter a City</label>
                         <input class="form-control" id="city" type="text" placeholder="eg. el cajon">
                       </li>
 
                       <li class="filter list-group-item bg-dark">
-                        <label for="state" style="color: white">Enter a State</label>
+                        <label for="state" style="color: yellow">Enter a State</label>
                         <input class="form-control" id="state" type="text" placeholder="eg. ca">
                       </li>
                       
                       <li class="filter list-group-item bg-dark">
-                        <label for="country" style="color: white;">Enter a Country</label>
+                        <label for="country" style="color: yellow;">Enter a Country</label>
                         <input class="form-control" id="Country" type="text" placeholder="eg. us">
                       </li>
 
                       <li class="filter list-group-item bg-dark">
-                        <label for="shape" style="color: white;">Enter a Shape</label>
+                        <label for="shape" style="color: yellow;">Enter a Shape</label>
                         <input class="form-control" id="shape" type="text" placeholder="eg. shape"><br>
                       </li>
 
@@ -80,23 +81,23 @@ crossorigin="anonymous"
                   <!--button-- id="filter-btn" type="button" class="btn btn-default">Filter Table</!button-->
                 </form>
               </div>
-        </div>
-         <div class=".col-md-9">
-          <table class="table table-striped">
-              <thead style="color: white">
-                <tr>
-                  <th>Date</th>
-                  <th>City</th>
-                  <th>State</th>
-                  <th>Country</th>
-                  <th>Shape</th>
-                  <th>Duration</th>
-                  <th>Comments</th>
-                </tr>
-              </thead>
-              <tbody></tbody>
-            </table>
-        </div>
+              <div class="col-md-9">
+                <table class="table table-striped">
+                    <thead style="color: yellow">
+                      <tr>
+                        <th>Date</th>
+                        <th>City</th>
+                        <th>State</th>
+                        <th>Country</th>
+                        <th>Shape</th>
+                        <th>Duration</th>
+                        <th>Comments</th>
+                      </tr>
+                    </thead>
+                    <tbody></tbody>
+                  </table>
+              </div>
+        </div> 
     </div>
     <footer class="footer">
       <span class="bottom">We are not Alone!</span>
