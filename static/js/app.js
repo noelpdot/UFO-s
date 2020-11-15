@@ -73,10 +73,8 @@ delete filters[filterId]
     buildTable(filterdata);
   }
   
- // Build the table when the page loads
-  buildTable(tableData);
-
-  // 2. Attach an event to listen for changes to each filter
+   // 2. Attach an event to listen for changes to each filter
   d3.selectAll(".filter").on("change",updateFilters);
   
- 
+// Build the table when the page loads
+  buildTable(tableData);
