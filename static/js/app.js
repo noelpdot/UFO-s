@@ -23,6 +23,9 @@ function buildTable(data) {
   });
 }
 
+// lets initialize and populate table with data from the file.
+buildTable(tableData);
+
 // 1. Create a variable to keep track of all the filters as an object.
 var filters ={}
 
@@ -70,8 +73,10 @@ delete filters[filterId]
     buildTable(filterdata);
   }
   
+ // Build the table when the page loads
+  buildTable(tableData);
+
   // 2. Attach an event to listen for changes to each filter
   d3.selectAll(".filter").on("change",updateFilters);
   
-  // Build the table when the page loads
-  buildTable(tableData);
+ 
